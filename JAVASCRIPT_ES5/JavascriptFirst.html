@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavascriptFirst.html</title>
+    <!-- 자바스크립트(스크립트 프로그래밍 언어)는 <script> 안에 작성
+        네이버 cafe에서 아무것도 입력하지 않고 글쓰기를 눌렀을 때 
+        뜨는 경고창과 닫기와 동시에 제목으로 커서가 이동하는 기능은 자바스크립트로만 가능하다
+        html로는 불가
+        
+        자바 스크립트는 주로 웹브라우저 내에서 사용
+        node.js는 브라우저 뿐만 아니라 다른 환경에서도 사용 가능
+    -->
+    
+    <script>
+        //한줄 주석
+        /*
+        여러줄 주석
+        */
+    //     setTimeout(function(){
+    //     console.log('3초후에 콘솔에 출력됨');
+    // },3000);
+    // <!-- 
+    // setTimeout(function(){
+    //     alert('3초후에 경고창이 떠요')
+    // },3000);
+    //  -->
+
+    /*
+    Client-Side Script Language는
+    (HTML5/CSS3/JAVASCRIPT/JQUERY등)은
+    웹 브라우저
+    */
+     //<h2>자바스크립트코드가 아니다</h2>//script안에는 자바스크립트 코드만 입력가능하다
+     //alert('자바스크립트 함수 입니다');  --->닫기전 까지 그아래 명령문이 실행안된다. 블락!!
+     
+     var num;//변수 선언
+     //num = 10;
+     //num = 3.14;
+     //num = false
+     //num = "문자열 입니다";
+
+     /*위에 변수선언은 자바스크립트의 특징이다
+        자료형이 정해져 있지 않다
+        즉, 변수에 값을 넣는 것에 따라 자료형이 정해 진다.
+     */
+
+     console.log("num:"+num);//콘솔에 출력하겠다는 의미
+     if(num == undefined){
+         console.log("타입이 정의 되지 않았습니다",typeof num);//undefined도 하나의 타입이다
+     }
+     else console.log("타입이 정의 되었습니다",typeof num);
+     </script>
+</head>
+<body>
+    <h2>자바스크립트 첫 시간</h2>
+    alert('자바스크립트 함수 입니다');
+    <script>
+        //alert('바디안의 자바스크립트 함수 입니다');
+    </script>
+</body>
+</html>

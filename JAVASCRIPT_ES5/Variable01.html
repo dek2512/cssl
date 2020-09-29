@@ -6,7 +6,7 @@
     <title>Variable01.html</title>
     <script>
         /*
-        - 자스(ES5스펙)에셔ㅓ는 대소문자를 구분하낟
+        - 자스(ES5스펙)에서는 대소문자를 구분한다
         - 하나의 명령행이 끝나면 ; 로 명령으 끝을 알린다.
         - 자스에서는 변수에 넣은 값에 따라 그 변수의 자료형이 결정된다.
         - 변수 선언:var라는 키워드 사용
@@ -15,8 +15,9 @@
 
        //1]변수 선언
        var num;
+       
        //Document-->얘는 생성자
-        document.write('<h2>초기화 전</h2>')//얘는 body영역에 <h2>초기화 전</h2>가 생성되는거 와 같다
+        document.write('<h2>초기화 전</h2>');//얘는 body영역에 <h2>초기화 전</h2>가 생성되는거 와 같다
         document.write('num의 자료형:'+typeof(num)+',num에 저장된 값:'+ num);
         //num의 자료형:undefined,num에 저장된 값:undefined  <--이렇게 출력된다
         //즉 undefined는 자료형이자 값이다.
@@ -30,26 +31,26 @@
         document.write('<br/>num의 자료형:'+typeof(num)+', num에 저장된 값:'+ num);
         num = true;
         document.write('<br/>num의 자료형:'+typeof(num)+', num에 저장된 값:'+ num);
-        num = "문자열 입니다"
+        num = "문자열 입니다";
         document.write('<br/>num의 자료형:'+typeof(num)+', num에 저장된 값:'+ num);
 
         //3]변수 선언과 동시에 초기화
-        document.write('<h2>변수 선언과 동시에 초기화</h2>')
+        document.write('<h2>변수 선언과 동시에 초기화</h2>');
         var str = "자바스크립트";
         document.write('<br/>str의 자료형:'+typeof(str)+', str에 저장된 값:'+ str);
-        document.write('<h2>,(콤마)로 구분해서 동시에 변수 여러개 선언하기</h2>')
+        document.write('<h2>,(콤마)로 구분해서 동시에 변수 여러개 선언하기</h2>');
         
         //4]여러개 변수를 콤마(,)로 구분해서 동시 선언 및 초기화
         var num1 = 10,num2,str1="자스",str2;
+       
         document.write(num1+num2+"<br/>");
         //위에거는 NaN로 출력된다 undefined+숫자 =NaN(Not a Number)도 하나의 값이고 number타입
         document.write(typeof(num1+num2)+"<br/>");
-
         //NaN을 판단하는 함수:isNaN()
         if(isNaN(num1+num2))
-            document.write("num1+num2는 NaN이다<br/>")
+            document.write("num1+num2는 NaN이다<br/>");
         else
-            document.write("num1+num2는 NaN이 아니다<br/>")
+            document.write("num1+num2는 NaN이 아니다<br/>");
 
         
         //문자열 + undefinded = 문자열(즉 값은 문자열undefinded)
@@ -58,7 +59,7 @@
 
         //5]자스의 기타 자료형
         document.write("<h2>자스의 기타 자료형</h2>");
-        var date = new Date();
+        var date = new Date();  
         document.write("date의 자료형:"+typeof(date)+", date에 저장된 값: "+date);
 
         /*
@@ -74,7 +75,7 @@
         document.write("<br/>obj 자료형:"+typeof(obj)+", obj 저장된 값: "+obj);
         console.log("obj 자료형:"+typeof(obj)+", obj 저장된 값: "+obj);
         //브라우저나 콘솔이나 똑같이 출력된다
-
+        
         obj.name = '가길동';
         obj.age = 20;
         obj.walk = function(){
@@ -83,11 +84,12 @@
         //엄밀하게 말하면 함수의 시작주소 저장
         document.write("<br/>이름: "+obj.name+", 나이: "+obj.age+"<br/>");
         obj.walk();
-
         /*
         ※2가지 기억
         객체를 만드는 방법은 2가지다 생성자 함수를 이용하거나 {}를 이용하거나
         */
+        document.write("===============================================")
+
        
         var obj2 = {
             id:"kim",
@@ -109,11 +111,10 @@
         const PI = 3.14; //상수 선언
         
         document.write("<br/>PI 자료형: "+typeof(PI)+", PI 저장된 값: " + PI+"<br/>");
-        //Pi = 100;
-
+        //Pi = 100;  
         var f = function(a,b){return a+b;};
         document.write('<br/>f의 자료형:'+typeof(f)+',f에 저장된 값:'+f+"<br/>");
-        alert(f(10,5));
+        //alert(f(10,5));
 
         /*
         정리]

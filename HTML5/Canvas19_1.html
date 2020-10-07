@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas19_1.html</title>
+</head>
+<body>
+    <div>
+        <h2>canvas태그</h2>
+        <!-- ※캔바스의 가로폭 세로폭은 반드시 속성으로 설정(style(CSS)로하지말고) -->
+        <canvas id= "canvas" width = "200" height = "200" style="background-color: yellow;"></canvas>
+
+        <script>
+            var canvas = document.getElementById("canvas");//도화지
+            var ctx = canvas.getContext("2d");//그릴 도구
+
+            ctx.beginPath();//path를 그리기 시작하겠다는 의미
+            ctx.moveTo(0,0);//붓의 위치 옮기기
+            ctx.lineTo(50,50);//선그리기
+            ctx.stroke();//얘까지 해야 선이 그려진다
+            ctx.closePath();//path를 끝내겠다
+
+            ctx.beginPath();
+            ctx.lineCap="round"; //line끝 선을 처리하겠다
+            ctx.lineWidth = 10;//선의 두께
+            ctx.moveTo(50,50);//붓의 위치 옮기기
+            ctx.lineTo(100,50);//선그리기
+            ctx.stroke();//얘까지 해야 선이 그려진다
+            ctx.closePath();//path를 끝내겠다
+
+            ctx.beginPath();
+            ctx.lineWidth = 5;
+            ctx.moveTo(100,50);
+            ctx.lineTo(100,100);
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.fillStyle = "rgba(255,0,0,0.1)";//a는 알파 투명도 의미 (1에가까울수록 불투명,0에 가까울수록 투명)
+            ctx.fillRect(100,100,50,50);
+
+
+
+        </script>
+    </div>
+
+
+</body>
+</html>

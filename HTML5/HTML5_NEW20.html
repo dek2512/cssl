@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5_NEW20.html</title>
+</head>
+<body>
+    <fieldset>
+        <legend>HTML5에 새롭게 추가된 태그나 속성들</legend>
+        <h2>텍스트에 하이라이트 효과주는 태그(mark)</h2>
+        <p>
+            <span style="background-color: yellow;">삼성전자</span>는 올 하반기부터 지원할 <mark>'미래기술육성사업'</mark> 과제를 선정했다고 6일 밝혔다. <br/>
+            기초과학 분야 15개, 소재와 정보통신기술(ICT) 분야 각각 7개, 9개 등 총 31개 과제다. <br/>
+            삼성전자는 <mark>연구비로 396억원을 지원</mark>할 예정이다.<br/>
+            
+        </p>
+        <h2>진행을 표시하는 태그(progress)</h2>
+        <progress value="100" max="200" style="width: 300px; height: 40px;"></progress><!--CSS를 통해서 가로 세로폭 늘릴 수있음!-->
+
+        <h2>자동 완성 태그(datalist)</h2><!--잘안씀 제이쿼리 때문에-->
+        <label for= "keyword">검색어를 입력하세요</label>
+        <input type = "search" id="keyword" list="data_list"/>
+        <datalist id="data_list">
+            <option value="코로나"></option>
+            <option value="코로나19"></option>
+            <option value="코카콜라"></option>
+            <option value="코끼리"></option>
+            <option value="HTML5"></option>
+            <option value="Hybrid"></option>
+            <option value="NAVER"></option>
+            <option value="NATE"></option>
+
+        </datalist>
+
+        <h2>이미지를 그룹화 하는 태그(figure)</h2>
+        <figure><!--피규어태그는 block element이다-->
+            <figcaption>자바 이미지1</figcaption>
+            <img src="../Images/java-logo.jpg" alt="첫번째 이미지" width="100" height="50"/>
+        </figure>
+        <figure>
+            <figcaption>자바 이미지2</figcaption>
+            <img src="../Images/java-logo.jpg" alt="첫번째 이미지" width="100" height="50"/>
+        </figure>
+
+        <h2>새롭게 추가된 속성들</h2>
+        <h3>multiple, accept속성</h3><!--accept: 파일 유형을 필터링 할 수 있다-->
+        <input type = "file" multiple accept="image/png,image/jpeg"/>
+
+        <h3>autofocus</h3><!--자동으로 포커스가 간다 (마우스로 클릭 안해도)-->
+        <input type="text" autofocus/>
+
+        <h3>contenteditable속성</h3><!--원래는 수정이 안되는데 수정이 가능하게 한다-->
+        <p contenteditable="true">
+            <span style="background-color: yellow;">삼성전자</span>는 올 하반기부터 지원할 <mark>'미래기술육성사업'</mark> 과제를 선정했다고 6일 밝혔다. <br/>
+            기초과학 분야 15개, 소재와 정보통신기술(ICT) 분야 각각 7개, 9개 등 총 31개 과제다. <br/>
+            삼성전자는 <mark>연구비로 396억원을 지원</mark>할 예정이다.<br/>
+            
+        </p>
+
+        <h3>hidden속성</h3><!--감춘다-->
+        <input type="button" value="버튼" hidden/>
+
+        <h3>required속성</h3> <!--필수입력시키기-->
+        <form action="https://www.nate.com">
+            <input type="text" name = "name" required/>
+            남자 <input type="radio" name = "gender" value="남자" required/>
+            여자 <input type="radio" name = "gender" value="여자" required/>
+            동의 <input type="checkbox" name = "accept" value ="yes" required/>
+            <input type="submit" value="확인"/>
+        </form>
+
+        <h3>placeholder속성</h3><!--네이버 로그인 창을 보면 안다-->
+        아이디 <input type="text" placeholder="아이디"/>
+        비밀번호 <input type="password" placeholder="비밀번호"/>
+
+
+    </fieldset>
+</body>
+</html>

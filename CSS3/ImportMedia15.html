@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImportMedia15.html</title>
+    <!-- <link href="../Styles/import.css" rel="stylesheet"/> -->
+    <style>
+        /* 
+            import규칙을 이용한 외부 css파일 연결
+            반드시 style태그 안에
+            반드시 style태그 최상단에 위치 (안그러면 적용이 안된다)
+        */
+
+        @import url(../Styles/import.css);
+        .content{
+            color: yellow;
+            background-color: black;
+        }
+
+        /* media 규칙은 위치에 상관없음 */
+        @media screen{
+            .content{
+                color: white;
+            }
+        }
+
+        @media print{
+            .content{
+                color: black;
+                background-color: white;
+            }
+        }
+       
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <p>
+            회사는 대형 초음속 여객기 '오버추어'를 선보이기에 앞서 기술을 입증하기 위해 보다 작은 모델의 초음속 항공기인 XB-1, '베이비 붐'을 개발했다. 오버추어의 약 3분의 1 크기의 프로토타입이다.
+        </p>
+    </div>
+</body>
+</html>

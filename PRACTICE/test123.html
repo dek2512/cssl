@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div#content li:nth-child(2n+1){
+            background-color: #cc00cc;
+        }
+
+        /* 짝수번째 만 선택: n은 0부터 시작 1씩 증가 */
+        /* nth-child(2n)함수가 first-child,last-child등 속성보다 우선순위가 높다 */
+        div#content li:nth-child(2n){
+            background-color: #0aa0cc;
+        }
+
+        div#content li:first-child{
+            border-radius: 10px 10px 0 0 ;
+            background-color: rgb(204, 194, 55);
+        } 
+        
+        div#content li:last-child{  /*두개가 선택되나 위의 nth계열이 우선 순위가 높아서 첫번쨰 UL의 마지막 li가 선택되지않는다*/
+            border-radius:  0 0 10px 10px ;
+            background-color: rgb(204, 194, 55);
+        } 
+        
+        /*
+        div#content ul li:first-child{
+            border-radius: 10px 10px 0 0 ;
+            background-color: rgb(204, 194, 55);
+        }
+
+        div#content li:last-child{
+            border-radius: 0 0 10px 10px ;
+            background-color: rgb(204, 194, 55);
+        }  
+        */
+    </style>
+</head>
+<body>
+    <div id="content">
+
+        <ul>
+
+            <li>menu1</li>
+
+            <li>menu2</li>
+
+            <li>menu3</li>
+
+            <li>menu4</li>
+
+            <li>menu5</li>
+
+            <li>menu6</li>
+
+        </ul>
+
+    </div>
+</body>
+</html>

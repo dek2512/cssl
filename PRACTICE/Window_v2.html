@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window_v2.html</title>
+
+    <script>
+        /*
+        팝업창: 광고 나 공지사항 게시할때
+
+        window.open("팝업으로 띄울 페이지 경로","팝업창명","팝업창 모양을 설정하기 위한 속성들");
+
+        - open()메소드는 윈도우 객체를 반환
+        - 팝업창을 여러개 띄울때 팝업창명이 같음녀 하나의 창에 계속 뿌려진다.
+
+        *팝업창 모양 설정을 위한 속성들
+        width: 팝업창의 가로폭
+        height: 팝업차으이 세로크기
+        top: 팝업창을 띄울 Y좌표(모니터 기준)
+        left: 팝업창을 띄울 X좌표(모니터 기준)
+
+        // 아래 속성값들의 기본값은 
+        no(0)
+        enable시 yes(1)를 주면됨
+
+        toolbar
+        location
+        menubar
+        scrollbars: auto가 추가됨( 팝업창 안의 내용이 많으면 자동으로 스크롤바가 생김)
+        resizable(파이어폭스는 적용 안됨)
+
+        */
+
+        // 1]기본 팝업창
+        // var winObj = window.open("https://www.daum.net","pupup1","width=400,height=400,left=100,top=100")
+        // // console.log("%O",winObj);
+        // open("../JAVASCRIPT_ES5/IF04.html","popup2","width=400,height=400,left=150,top=150");
+        // open("../JAVASCRIPT_ES5/ForWhile06.html","popup3","width=400,height=400,left=200,top=200");
+
+        // 처음에 뜬 팝업창에 포커스 주기]
+        // winObj.focus();
+
+        // 2]기타 속성 사용
+        // var winObj = window.open("https://www.daum.net","popup1","width=400,height=400,left=150,top=150")
+
+        // 모니터 해상도
+        var width = window.screen.width;
+        var height = window.screen.height;
+        console.log("모니터 해상도:가로 - %s, 세로 - %s",width,height);
+        console.log("모니터 해상도(하단 트레이바 제외: 가로 - %s , 세로 - %s",window.screen.availWidth,screen.availHeight)
+
+        var xpos = width/2 - 400/2;
+        var ypos = height/2 - 400/2;
+
+        var winObj = window.open()
+
+    </script>
+
+</head>
+<body>
+    <button onclick="popupClose();">부모에서 팝업창 닫기</button>
+
+    <fieldset>
+
+        <legend>우편번호</legend>
+
+        <table style="border-spacing:1px;background-color:green">
+
+            <tr style="background-color:white">
+
+                <td>우편번호</td>
+
+                <td>
+                    <input type="text" id="zip1" size="3" maxlength="3" /> -
+
+                    <input type="text" id="zip2" size="3" maxlength="3" />
+
+                    <input type="button" value="우편번호" onclick="zipOpen();" />
+
+                </td>
+
+            </tr>
+
+            <tr style="background-color:white">
+
+                <td>기본 주소</td>
+
+                <td><input type="text" size="50" id="addr" /></td>
+
+            </tr>
+
+            <tr style="background-color:white">
+
+                <td>상세 주소</td>
+
+                <td><input type="text" size="50" id="detail" /></td>
+
+            </tr>
+
+        </table>
+
+    </fieldset>
+</body>
+</html>
